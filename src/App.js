@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Document, Page } from 'react-pdf';
 
-class App extends Component {
+export class App extends Component {
   state = {
     numPages: null,
     pageNumber: 1,
