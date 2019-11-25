@@ -1,19 +1,19 @@
-import React, { Component } from "react";
-import logo from './logo.svg';
-import './App.css';
-import { Document, Page } from "react-pdf";
+import React, { Component } from 'react';
+import { Document, Page } from 'react-pdf';
 
-function App() {
+class App extends Component {
   state = {
     numPages: null,
     pageNumber: 1,
   }
+
   onDocumentLoadSuccess = ({ numPages }) => {
     this.setState({ numPages });
   }
 
   render() {
     const { pageNumber, numPages } = this.state;
+
     return (
       <div>
         <Document
@@ -27,4 +27,3 @@ function App() {
     );
   }
 }
-export default class App extends Component;
